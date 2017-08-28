@@ -9,7 +9,7 @@
 import UIKit
 
 
-var myGame: Game = Game(numPlayers: 2)
+//var myGame: Game = Game(numPlayers: 2)
 
 class ViewController: UIViewController {
     
@@ -20,20 +20,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playerCountDisplay.text = String(myGame.numPlayers)
+        playerCountDisplay.text = String(Game.myGame.numPlayers)
+        playerCountDisplay.textColor = colorScheme.blueberry
+        playerSlider.minimumTrackTintColor = colorScheme.appleCore
+        playerSlider.maximumTrackTintColor = colorScheme.blueberry
         
     }
 
 
     @IBAction func playerCountChanged(_ sender: Any) {
         
-        myGame.numPlayers = Int(playerSlider.value)
-        playerCountDisplay.text = String(myGame.numPlayers)
+        Game.myGame.numPlayers = Int(playerSlider.value)
+        playerCountDisplay.text = String(Game.myGame.numPlayers)
         
-        if myGame.numPlayers % 2 == 0 {
-            playerCountDisplay.textColor = UIColor.green
+        if Game.myGame.numPlayers % 2 == 0 {
+            playerCountDisplay.textColor = colorScheme.appleCore
         } else {
-            playerCountDisplay.textColor = UIColor.green
+            playerCountDisplay.textColor = colorScheme.blueberry
         }
     }
   

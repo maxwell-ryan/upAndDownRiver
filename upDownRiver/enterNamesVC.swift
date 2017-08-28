@@ -14,21 +14,43 @@ class playerNameScreenViewController: UIViewController {
     @IBOutlet weak var nameEntryLabel: UILabel!
     @IBOutlet weak var nameEntryBox: UITextField!
    
+    @IBOutlet weak var iconSelector: UISlider!
+    @IBOutlet weak var iconDisplay: UILabel!
     var namesEntered = 0
     var player = 1
     var nameEntryComplete = false
     
+    var icons = ["😀","😃","😄","😁","🤠","🤡","🤑","😱","👻","👽","👩‍🔧","👨‍🚀"]
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        //super.viewDidLoad()
         
-        print(myGame.numPlayers)
-        playerNamePrompt.text = "Let's get the names of those \(myGame.numPlayers) players:"
-        playerNamePrompt.textColor = UIColor.blue
+        print(Game.myGame.numPlayers)
+        playerNamePrompt.textColor = colorScheme.blueberry
+        playerNamePrompt.text = "Let's get the names of those \(Game.myGame.numPlayers) players:"
+        
        
-        nameEntryLabel.text = "Enter player \(player)'s name:"
+        nameEntryLabel.textColor = colorScheme.apricot
+        nameEntryLabel.text = "Enter player \(player)'s name and select a icon"
+        
+        iconDisplay.text = icons[0]
+        iconSelector.isContinuous = true
+        iconSelector.maximumValue = Float(icons.count - 1)
+        iconSelector.minimumValue = 0.0
+        iconSelector.thumbTintColor = colorScheme.blueberry
+        iconSelector.maximumTrackTintColor = colorScheme.appleCore
+        iconSelector.minimumTrackTintColor = colorScheme.appleCore
+        iconSelector.value = 0
+        iconSelector.addTarget(self, action: #selector(changeIcon), for: .valueChanged)
 
    }
     
+    func changeIcon(sender: UISlider) {
+        
+        var selection = Int(sender.value)
+        iconDisplay.text = icons[selection]
+        
+    }
     
     @IBAction func playerSubmission(_ sender: Any) {
         
@@ -39,19 +61,25 @@ class playerNameScreenViewController: UIViewController {
         } else {
             
             var nextPlayer: Player = Player(name: String(nameEntryBox.text!))
-            myGame.currPlayers.append(nextPlayer)
+            if iconDisplay.text != nil {
+                nextPlayer.icon = iconDisplay.text!
+            }
             
+            Game.myGame.currPlayers.append(nextPlayer)
+            
+            iconSelector.value = 0
             nameEntryBox.text = ""
             namesEntered += 1
             
             nameEntryLabel.text = "Enter player \(player + namesEntered)'s name:"
-            print(myGame.currPlayers.count)
+            print(Game.myGame.currPlayers.count)
         }
         
-        if namesEntered == myGame.numPlayers {
+        if namesEntered == Game.myGame.numPlayers {
             print("All names received.")
             performSegue(withIdentifier: "nameConfirmation", sender: sender)
         }
+        
     }
     
     func showAlertButtonTapped(){

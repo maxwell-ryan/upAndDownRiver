@@ -14,16 +14,20 @@ class nameConfirmation: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        for name in myGame.currPlayers {
-            print("\(name)")
-            nameTable.text?.append("\(name.name) is ready - current score: \(name.getScore())\n")
+        
+        nameTable.textColor = colorScheme.citrus
+        var player = 1
+        
+        for name in Game.myGame.currPlayers {
+            print("\(name.name)")
+            nameTable.text?.append("\(name.icon), \(name.name), is ready!\n")
+            player += 1
         }
         
     }
 
     @IBAction func showStats(_ sender: Any) {
-        performSegue(withIdentifier: "stats", sender: sender)
+        performSegue(withIdentifier: "getBids", sender: sender)
     }
 
     override func didReceiveMemoryWarning() {

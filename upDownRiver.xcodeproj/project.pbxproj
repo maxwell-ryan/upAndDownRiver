@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0725C11D1EFC8B950044011D /* bidEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725C11B1EFC8B950044011D /* bidEntryVC.swift */; };
+		0725C11E1EFC8B950044011D /* confirmNamesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725C11C1EFC8B950044011D /* confirmNamesVC.swift */; };
+		0725C1221EFC8C010044011D /* statsTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725C11F1EFC8C010044011D /* statsTableViewVC.swift */; };
+		0725C1231EFC8C010044011D /* enterNamesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725C1201EFC8C010044011D /* enterNamesVC.swift */; };
+		0725C1241EFC8C010044011D /* selectPlayerCountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725C1211EFC8C010044011D /* selectPlayerCountVC.swift */; };
 		0782365C1EFADE03002B8939 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0782365B1EFADE03002B8939 /* player.swift */; };
-		078236601EFB084A002B8939 /* StatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0782365F1EFB084A002B8939 /* StatsTableViewController.swift */; };
-		078236621EFB0CBC002B8939 /* BidEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078236611EFB0CBC002B8939 /* BidEntryViewController.swift */; };
+		07A7E34C1EFD877000E8092A /* playHandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A7E34B1EFD877000E8092A /* playHandVC.swift */; };
 		07F1DA6A1EF9DFBF0017E593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1DA691EF9DFBF0017E593 /* AppDelegate.swift */; };
-		07F1DA6C1EF9DFBF0017E593 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1DA6B1EF9DFBF0017E593 /* ViewController.swift */; };
 		07F1DA6F1EF9DFBF0017E593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F1DA6D1EF9DFBF0017E593 /* Main.storyboard */; };
 		07F1DA711EF9DFBF0017E593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F1DA701EF9DFBF0017E593 /* Assets.xcassets */; };
 		07F1DA741EF9DFBF0017E593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F1DA721EF9DFBF0017E593 /* LaunchScreen.storyboard */; };
 		07F1DA7F1EF9DFBF0017E593 /* upDownRiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1DA7E1EF9DFBF0017E593 /* upDownRiverTests.swift */; };
 		07F1DA8A1EF9DFBF0017E593 /* upDownRiverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1DA891EF9DFBF0017E593 /* upDownRiverUITests.swift */; };
-		07F1DA981EF9EAB40017E593 /* playerNameScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1DA971EF9EAB40017E593 /* playerNameScreenViewController.swift */; };
-		07F1DA9A1EF9FD560017E593 /* nameConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1DA991EF9FD560017E593 /* nameConfirmation.swift */; };
+		CF638FF11F51FE7B008C242C /* bidEntryTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF638FF01F51FE7B008C242C /* bidEntryTableViewVC.swift */; };
+		CF638FF31F5204D8008C242C /* bidEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF638FF21F5204D8008C242C /* bidEntryTableViewCell.swift */; };
+		CFC33CF31F1FED1F001DB3F0 /* trickEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC33CF21F1FED1E001DB3F0 /* trickEntryVC.swift */; };
+		CFC33CF51F1FF72D001DB3F0 /* viewStatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC33CF41F1FF72D001DB3F0 /* viewStatsVC.swift */; };
+		CFFDDBAA1F4E3D12001E642A /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFDDBA91F4E3D12001E642A /* constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,12 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0725C11B1EFC8B950044011D /* bidEntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bidEntryVC.swift; sourceTree = "<group>"; };
+		0725C11C1EFC8B950044011D /* confirmNamesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = confirmNamesVC.swift; sourceTree = "<group>"; };
+		0725C11F1EFC8C010044011D /* statsTableViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = statsTableViewVC.swift; sourceTree = "<group>"; };
+		0725C1201EFC8C010044011D /* enterNamesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = enterNamesVC.swift; sourceTree = "<group>"; };
+		0725C1211EFC8C010044011D /* selectPlayerCountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectPlayerCountVC.swift; sourceTree = "<group>"; };
 		0782365B1EFADE03002B8939 /* player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
-		0782365F1EFB084A002B8939 /* StatsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsTableViewController.swift; sourceTree = "<group>"; };
-		078236611EFB0CBC002B8939 /* BidEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BidEntryViewController.swift; sourceTree = "<group>"; };
+		07A7E34B1EFD877000E8092A /* playHandVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playHandVC.swift; sourceTree = "<group>"; };
 		07F1DA661EF9DFBF0017E593 /* upDownRiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = upDownRiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F1DA691EF9DFBF0017E593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07F1DA6B1EF9DFBF0017E593 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		07F1DA6E1EF9DFBF0017E593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07F1DA701EF9DFBF0017E593 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07F1DA731EF9DFBF0017E593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,8 +64,11 @@
 		07F1DA851EF9DFBF0017E593 /* upDownRiverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = upDownRiverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F1DA891EF9DFBF0017E593 /* upDownRiverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = upDownRiverUITests.swift; sourceTree = "<group>"; };
 		07F1DA8B1EF9DFBF0017E593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07F1DA971EF9EAB40017E593 /* playerNameScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playerNameScreenViewController.swift; sourceTree = "<group>"; };
-		07F1DA991EF9FD560017E593 /* nameConfirmation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nameConfirmation.swift; sourceTree = "<group>"; };
+		CF638FF01F51FE7B008C242C /* bidEntryTableViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bidEntryTableViewVC.swift; sourceTree = "<group>"; };
+		CF638FF21F5204D8008C242C /* bidEntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bidEntryTableViewCell.swift; sourceTree = "<group>"; };
+		CFC33CF21F1FED1E001DB3F0 /* trickEntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trickEntryVC.swift; sourceTree = "<group>"; };
+		CFC33CF41F1FF72D001DB3F0 /* viewStatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewStatsVC.swift; sourceTree = "<group>"; };
+		CFFDDBA91F4E3D12001E642A /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,14 +120,20 @@
 			isa = PBXGroup;
 			children = (
 				07F1DA691EF9DFBF0017E593 /* AppDelegate.swift */,
-				0782365F1EFB084A002B8939 /* StatsTableViewController.swift */,
-				07F1DA6B1EF9DFBF0017E593 /* ViewController.swift */,
-				07F1DA971EF9EAB40017E593 /* playerNameScreenViewController.swift */,
-				07F1DA991EF9FD560017E593 /* nameConfirmation.swift */,
+				0725C11B1EFC8B950044011D /* bidEntryVC.swift */,
+				CF638FF01F51FE7B008C242C /* bidEntryTableViewVC.swift */,
+				CF638FF21F5204D8008C242C /* bidEntryTableViewCell.swift */,
+				0725C11F1EFC8C010044011D /* statsTableViewVC.swift */,
+				07A7E34B1EFD877000E8092A /* playHandVC.swift */,
+				CFFDDBA91F4E3D12001E642A /* constants.swift */,
+				0725C1201EFC8C010044011D /* enterNamesVC.swift */,
+				0725C1211EFC8C010044011D /* selectPlayerCountVC.swift */,
+				0725C11C1EFC8B950044011D /* confirmNamesVC.swift */,
 				0782365B1EFADE03002B8939 /* player.swift */,
-				07F1DA6D1EF9DFBF0017E593 /* Main.storyboard */,
-				078236611EFB0CBC002B8939 /* BidEntryViewController.swift */,
+				CFC33CF21F1FED1E001DB3F0 /* trickEntryVC.swift */,
+				CFC33CF41F1FF72D001DB3F0 /* viewStatsVC.swift */,
 				07F1DA701EF9DFBF0017E593 /* Assets.xcassets */,
+				07F1DA6D1EF9DFBF0017E593 /* Main.storyboard */,
 				07F1DA721EF9DFBF0017E593 /* LaunchScreen.storyboard */,
 				07F1DA751EF9DFBF0017E593 /* Info.plist */,
 			);
@@ -208,6 +226,7 @@
 				TargetAttributes = {
 					07F1DA651EF9DFBF0017E593 = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = HGLGB2JMB5;
 						ProvisioningStyle = Automatic;
 					};
 					07F1DA791EF9DFBF0017E593 = {
@@ -274,13 +293,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				078236621EFB0CBC002B8939 /* BidEntryViewController.swift in Sources */,
-				07F1DA6C1EF9DFBF0017E593 /* ViewController.swift in Sources */,
-				078236601EFB084A002B8939 /* StatsTableViewController.swift in Sources */,
 				07F1DA6A1EF9DFBF0017E593 /* AppDelegate.swift in Sources */,
-				07F1DA981EF9EAB40017E593 /* playerNameScreenViewController.swift in Sources */,
+				CF638FF11F51FE7B008C242C /* bidEntryTableViewVC.swift in Sources */,
+				CF638FF31F5204D8008C242C /* bidEntryTableViewCell.swift in Sources */,
 				0782365C1EFADE03002B8939 /* player.swift in Sources */,
-				07F1DA9A1EF9FD560017E593 /* nameConfirmation.swift in Sources */,
+				CFC33CF31F1FED1F001DB3F0 /* trickEntryVC.swift in Sources */,
+				0725C11D1EFC8B950044011D /* bidEntryVC.swift in Sources */,
+				CFFDDBAA1F4E3D12001E642A /* constants.swift in Sources */,
+				0725C1221EFC8C010044011D /* statsTableViewVC.swift in Sources */,
+				CFC33CF51F1FF72D001DB3F0 /* viewStatsVC.swift in Sources */,
+				0725C1241EFC8C010044011D /* selectPlayerCountVC.swift in Sources */,
+				07A7E34C1EFD877000E8092A /* playHandVC.swift in Sources */,
+				0725C1231EFC8C010044011D /* enterNamesVC.swift in Sources */,
+				0725C11E1EFC8B950044011D /* confirmNamesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +457,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HGLGB2JMB5;
 				INFOPLIST_FILE = upDownRiver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = weinbema.CS261.upDownRiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,7 +471,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HGLGB2JMB5;
 				INFOPLIST_FILE = upDownRiver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = weinbema.CS261.upDownRiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";

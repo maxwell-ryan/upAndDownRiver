@@ -15,41 +15,57 @@ class StatsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        advanceButton.setTitle("Continue with hand", for: .normal)
+        advanceButton.setTitle("Here we go...", for: .highlighted)
+        //add padding so table view doesn't overlap status bar at top (LTE, reception bars, etc.)
+        self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Scoreboard"
+    }
 
     @IBAction func enterBid(_ sender: Any) {
-        performSegue(withIdentifier: "bids", sender: sender)
+        performSegue(withIdentifier: "continueHand", sender: sender)
     }
     
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        //simple one section tableView
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return myGame.currPlayers.count
+        if section == 0 {
+            return Game.myGame.currPlayers.count
+        } else {
+            return 0;
+        }
+
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell: UITableViewCell = statsView.dequeueReusableCell(withIdentifier: "prototype1", for: indexPath)
 
-        cell.textLabel?.text = myGame.currPlayers[indexPath.row].name
-        cell.detailTextLabel?.text = String(myGame.currPlayers[indexPath.row].getScore())
+
+        cell.textLabel?.text = "\(Game.myGame.currPlayers[indexPath.row].icon) - \(Game.myGame.currPlayers[indexPath.row].name)"
+        cell.detailTextLabel?.text = String(Game.myGame.currPlayers[indexPath.row].getOverallScore())
 
         return cell
     }

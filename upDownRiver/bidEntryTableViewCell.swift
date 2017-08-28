@@ -10,6 +10,10 @@ import UIKit
 
 class bidEntryTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nameDisplay: UILabel!
+    @IBOutlet weak var bidDisplay: UILabel!
+    @IBOutlet weak var bidSlider: UISlider!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
