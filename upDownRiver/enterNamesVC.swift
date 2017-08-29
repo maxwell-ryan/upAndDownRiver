@@ -68,6 +68,7 @@ class playerNameScreenViewController: UIViewController {
             Game.myGame.currPlayers.append(nextPlayer)
             
             iconSelector.value = 0
+            iconDisplay.text = icons[0]
             nameEntryBox.text = ""
             namesEntered += 1
             

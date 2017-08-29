@@ -12,6 +12,8 @@
 		0725C1221EFC8C010044011D /* statsTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725C11F1EFC8C010044011D /* statsTableViewVC.swift */; };
 		0725C1231EFC8C010044011D /* enterNamesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725C1201EFC8C010044011D /* enterNamesVC.swift */; };
 		0725C1241EFC8C010044011D /* selectPlayerCountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725C1211EFC8C010044011D /* selectPlayerCountVC.swift */; };
+		07411AEE1F549F1A0078CBB8 /* statsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07411AED1F549F1A0078CBB8 /* statsTableViewCell.swift */; };
+		07411AF01F54A8030078CBB8 /* bidHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07411AEF1F54A8030078CBB8 /* bidHeaderTableViewCell.swift */; };
 		0782365C1EFADE03002B8939 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0782365B1EFADE03002B8939 /* player.swift */; };
 		07A7E34C1EFD877000E8092A /* playHandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A7E34B1EFD877000E8092A /* playHandVC.swift */; };
 		07F1DA6A1EF9DFBF0017E593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1DA691EF9DFBF0017E593 /* AppDelegate.swift */; };
@@ -50,6 +52,8 @@
 		0725C11F1EFC8C010044011D /* statsTableViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = statsTableViewVC.swift; sourceTree = "<group>"; };
 		0725C1201EFC8C010044011D /* enterNamesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = enterNamesVC.swift; sourceTree = "<group>"; };
 		0725C1211EFC8C010044011D /* selectPlayerCountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectPlayerCountVC.swift; sourceTree = "<group>"; };
+		07411AED1F549F1A0078CBB8 /* statsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = statsTableViewCell.swift; sourceTree = "<group>"; };
+		07411AEF1F54A8030078CBB8 /* bidHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bidHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		0782365B1EFADE03002B8939 /* player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		07A7E34B1EFD877000E8092A /* playHandVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playHandVC.swift; sourceTree = "<group>"; };
 		07F1DA661EF9DFBF0017E593 /* upDownRiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = upDownRiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +128,7 @@
 				CF638FF01F51FE7B008C242C /* bidEntryTableViewVC.swift */,
 				CF638FF21F5204D8008C242C /* bidEntryTableViewCell.swift */,
 				0725C11F1EFC8C010044011D /* statsTableViewVC.swift */,
+				07411AED1F549F1A0078CBB8 /* statsTableViewCell.swift */,
 				07A7E34B1EFD877000E8092A /* playHandVC.swift */,
 				CFFDDBA91F4E3D12001E642A /* constants.swift */,
 				0725C1201EFC8C010044011D /* enterNamesVC.swift */,
@@ -134,6 +139,7 @@
 				CFC33CF41F1FF72D001DB3F0 /* viewStatsVC.swift */,
 				07F1DA701EF9DFBF0017E593 /* Assets.xcassets */,
 				07F1DA6D1EF9DFBF0017E593 /* Main.storyboard */,
+				07411AEF1F54A8030078CBB8 /* bidHeaderTableViewCell.swift */,
 				07F1DA721EF9DFBF0017E593 /* LaunchScreen.storyboard */,
 				07F1DA751EF9DFBF0017E593 /* Info.plist */,
 			);
@@ -295,11 +301,13 @@
 			files = (
 				07F1DA6A1EF9DFBF0017E593 /* AppDelegate.swift in Sources */,
 				CF638FF11F51FE7B008C242C /* bidEntryTableViewVC.swift in Sources */,
+				07411AF01F54A8030078CBB8 /* bidHeaderTableViewCell.swift in Sources */,
 				CF638FF31F5204D8008C242C /* bidEntryTableViewCell.swift in Sources */,
 				0782365C1EFADE03002B8939 /* player.swift in Sources */,
 				CFC33CF31F1FED1F001DB3F0 /* trickEntryVC.swift in Sources */,
 				0725C11D1EFC8B950044011D /* bidEntryVC.swift in Sources */,
 				CFFDDBAA1F4E3D12001E642A /* constants.swift in Sources */,
+				07411AEE1F549F1A0078CBB8 /* statsTableViewCell.swift in Sources */,
 				0725C1221EFC8C010044011D /* statsTableViewVC.swift in Sources */,
 				CFC33CF51F1FF72D001DB3F0 /* viewStatsVC.swift in Sources */,
 				0725C1241EFC8C010044011D /* selectPlayerCountVC.swift in Sources */,

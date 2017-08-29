@@ -36,6 +36,13 @@ class Player {
         //trick.append(0)
     }
     
+    func getCurrentStreak() -> Int {
+        return currentStreak
+    }
+    
+    func getLongestStreak() -> Int {
+        return longestStreak
+    }
     func getOverallScore() -> Int {
         return currentScore
     }

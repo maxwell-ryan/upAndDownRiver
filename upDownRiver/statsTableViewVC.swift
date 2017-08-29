@@ -11,13 +11,10 @@ import UIKit
 class StatsTableViewController: UITableViewController {
 
     @IBOutlet var statsView: UITableView!
-    @IBOutlet weak var advanceButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        advanceButton.setTitle("Continue with hand", for: .normal)
-        advanceButton.setTitle("Here we go...", for: .highlighted)
+      
         //add padding so table view doesn't overlap status bar at top (LTE, reception bars, etc.)
         self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         
@@ -27,6 +24,11 @@ class StatsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         //self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        statsView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,12 +36,14 @@ class StatsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Scoreboard"
+        
+        if section == 0 {
+            return "Scoreboard"
+        } else {
+            return ""
+        }
     }
 
-    @IBAction func enterBid(_ sender: Any) {
-        performSegue(withIdentifier: "continueHand", sender: sender)
-    }
     
     // MARK: - Table view data source
 
@@ -61,11 +65,16 @@ class StatsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: UITableViewCell = statsView.dequeueReusableCell(withIdentifier: "prototype1", for: indexPath)
+        let currentPlayer = Game.myGame.currPlayers[indexPath.row]
+        
+        let cell = statsView.dequeueReusableCell(withIdentifier: "statsCell", for: indexPath) as! statsTableViewCell
 
-
-        cell.textLabel?.text = "\(Game.myGame.currPlayers[indexPath.row].icon) - \(Game.myGame.currPlayers[indexPath.row].name)"
-        cell.detailTextLabel?.text = String(Game.myGame.currPlayers[indexPath.row].getOverallScore())
+        cell.nameDisplay.text = "\(currentPlayer.icon) \(currentPlayer.name)"
+        cell.scoreDisplay.text = String(currentPlayer.getOverallScore())
+        //cell.currentSteakDisplay.text = "Current Streak: \(currentPlayer.getCurrentStreak())"
+        //cell.longestStreakDisplay.text = "Longest Steak: \(currentPlayer.getLongestStreak())"
+        cell.currentSteakDisplay.text = "Current streak: \(currentPlayer.getCurrentStreak())"
+        cell.longestStreakDisplay.text = "Longest streak: \(currentPlayer.getLongestStreak())"
 
         return cell
     }

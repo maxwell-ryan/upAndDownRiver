@@ -10,6 +10,11 @@ import UIKit
 
 class statsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nameDisplay: UILabel!
+    @IBOutlet weak var scoreDisplay: UILabel!
+    @IBOutlet weak var currentSteakDisplay: UILabel!
+    @IBOutlet weak var longestStreakDisplay: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

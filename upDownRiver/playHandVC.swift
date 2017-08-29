@@ -30,9 +30,9 @@ class playHandVC: UIViewController {
         for index in 0...Game.myGame.numPlayers - 1 {
             
             if Game.myGame.overallRound > 1 {
-                detailLabel.text!.append("\(Game.myGame.currPlayers[index].name) - Score: \(Game.myGame.currPlayers[index].getOverallScore()) - Bid: \(Game.myGame.currPlayers[index].getBid())\n")
+                detailLabel.text!.append("\(Game.myGame.currPlayers[index].icon) \(Game.myGame.currPlayers[index].name) - Score: \(Game.myGame.currPlayers[index].getOverallScore()) - Bid: \(Game.myGame.currPlayers[index].getBid())\n")
             } else {
-                detailLabel.text!.append("\(Game.myGame.currPlayers[index].name) - Score: 0 - Bid: \(Game.myGame.currPlayers[index].getBid())\n")
+                detailLabel.text!.append("\(Game.myGame.currPlayers[index].icon) \(Game.myGame.currPlayers[index].name) - Score: 0 - Bid: \(Game.myGame.currPlayers[index].getBid())\n")
             }
         
         }

@@ -174,6 +174,12 @@ class TrickEntryViewController: UIViewController {
         
         associatedLabel.text = "\(num)"
         
+        if (num == Game.myGame.currRound) {
+            var stepper = UIStepper()
+            sender.removeFromSuperview()
+            self.view.addSubview(stepper)
+        }
+        
     }
     
     

@@ -10,6 +10,10 @@ import UIKit
 
 class bidHeaderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var roundProgressDisplay: UIProgressView!
+    @IBOutlet weak var dealerDisplay: UILabel!
+    @IBOutlet weak var roundDisplay: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
