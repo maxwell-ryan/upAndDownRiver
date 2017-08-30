@@ -8,10 +8,11 @@
 
 import UIKit
 
-class bidHeaderTableViewCell: UITableViewCell {
+class headerTableViewCell: UITableViewCell {
 
     @IBOutlet weak var roundProgressDisplay: UIProgressView!
     @IBOutlet weak var dealerDisplay: UILabel!
+    @IBOutlet weak var cardCountDisplay: UILabel!
     @IBOutlet weak var roundDisplay: UILabel!
     
     override func awakeFromNib() {

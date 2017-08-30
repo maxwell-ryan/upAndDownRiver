@@ -17,6 +17,7 @@ class Player {
     var currentStreak: Int
     var previousRoundStreak: Int
     var longestStreak: Int
+    var previousLongestStreak: Int
     
     var score = [Int]()
     var bid = [Int]()
@@ -29,6 +30,7 @@ class Player {
         self.currentStreak = 0
         self.previousRoundStreak = 0
         self.longestStreak = 0
+        self.previousLongestStreak = 0
         self.icon = ""
         
         //score.append(0)
@@ -100,6 +102,9 @@ class Player {
                 previousRoundStreak = currentStreak
                 currentStreak = previousRoundStreak + 1
                 
+                //retain previous longest streak for score revision rewinding
+                previousLongestStreak = longestStreak
+                
                 if currentStreak > longestStreak {
                     longestStreak = currentStreak
                 }
@@ -114,6 +119,7 @@ class Player {
                 
                 //reset the user's current streak
                 previousRoundStreak = currentStreak
+                previousLongestStreak = longestStreak
                 currentStreak = 0
                 
                 //debug output
@@ -128,7 +134,7 @@ class Player {
                 
                 currentStreak = previousRoundStreak + 1
                 
-                if currentStreak > longestStreak {
+                if currentStreak > previousLongestStreak {
                     longestStreak = currentStreak
                 }
                 
@@ -138,6 +144,7 @@ class Player {
                 score[score.count - 1] = (lastTrick)
                 
                 currentStreak = 0
+                longestStreak = previousLongestStreak
                 
                 print("Score count now: \(score.count) with latest score: \(score.last!)")
             }

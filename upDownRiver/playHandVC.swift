@@ -13,9 +13,17 @@ class playHandVC: UIViewController {
     @IBOutlet weak var currRoundDisplay: UILabel!
     @IBOutlet weak var roundProgressBar: UIProgressView!
     @IBOutlet weak var detailLabel: UILabel!
-    
 
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    @IBAction func enterTricks(_ sender: Any) {
+        performSegue(withIdentifier: "enterTricks", sender: sender)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         roundProgressBar.progressTintColor = colorScheme.apricot
         roundProgressBar.trackTintColor = colorScheme.blueberry
@@ -30,21 +38,12 @@ class playHandVC: UIViewController {
         for index in 0...Game.myGame.numPlayers - 1 {
             
             if Game.myGame.overallRound > 1 {
-                detailLabel.text!.append("\(Game.myGame.currPlayers[index].icon) \(Game.myGame.currPlayers[index].name) - Score: \(Game.myGame.currPlayers[index].getOverallScore()) - Bid: \(Game.myGame.currPlayers[index].getBid())\n")
+                detailLabel.text!.append("\(Game.myGame.currPlayers[index].icon) \(Game.myGame.currPlayers[index].name) \t Score: \(Game.myGame.currPlayers[index].getOverallScore()) \t Bid: \(Game.myGame.currPlayers[index].getBid())\n")
             } else {
-                detailLabel.text!.append("\(Game.myGame.currPlayers[index].icon) \(Game.myGame.currPlayers[index].name) - Score: 0 - Bid: \(Game.myGame.currPlayers[index].getBid())\n")
+                detailLabel.text!.append("\(Game.myGame.currPlayers[index].icon) \(Game.myGame.currPlayers[index].name) \t Score: 0 - Bid: \(Game.myGame.currPlayers[index].getBid())\n")
             }
-        
         }
-    
-    }
-    
-    @IBAction func viewGameStats(_ sender: Any) {
-        performSegue(withIdentifier: "showGameStateDetails", sender: sender)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }

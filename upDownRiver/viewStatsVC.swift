@@ -21,25 +21,7 @@ class viewStatsVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        roundProgressBar.progressTintColor = colorScheme.apricot
-        roundProgressBar.trackTintColor = colorScheme.blueberry
-        roundProgressBar.setProgress(Float(Game.myGame.currRound) / Float(Game.myGame.numRounds), animated: true)
-        
-        currRoundDisplay.textColor = colorScheme.blueberry
-        currRoundDisplay.font = UIFont.boldSystemFont(ofSize: 15)
-        currRoundDisplay.text = "Round \(Game.myGame.currRound)"
-        
-        detailLabel.textColor = colorScheme.blueberry
-        
-        for index in 0...Game.myGame.numPlayers - 1 {
-            
-            if Game.myGame.overallRound >= 1 {
-                detailLabel.text!.append("\(Game.myGame.currPlayers[index].name) Round Score: \(Game.myGame.currPlayers[index].getRoundScore())\nBid: \(Game.myGame.currPlayers[index].getBid()) and made: \(Game.myGame.currPlayers[index].getTrick()) tricks.\n\n Overall Score: \(Game.myGame.currPlayers[index].getOverallScore())\n\n")
-            } else {
-                detailLabel.text!.append("\(Game.myGame.currPlayers[index].name) bid: \(Game.myGame.currPlayers[index].getBid())\n")
-            }
-            
-        }
+
         
     }
     
@@ -57,6 +39,26 @@ class viewStatsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        roundProgressBar.progressTintColor = colorScheme.apricot
+        roundProgressBar.trackTintColor = colorScheme.blueberry
+        roundProgressBar.setProgress(Float(Game.myGame.currRound) / Float(Game.myGame.numRounds), animated: true)
+        
+        currRoundDisplay.textColor = colorScheme.blueberry
+        currRoundDisplay.font = UIFont.boldSystemFont(ofSize: 15)
+        currRoundDisplay.text = "Round \(Game.myGame.currRound)"
+        
+        detailLabel.textColor = colorScheme.blueberry
+        
+        for index in 0...Game.myGame.numPlayers - 1 {
+            
+            if Game.myGame.overallRound >= 1 {
+                detailLabel.text!.append("\(Game.myGame.currPlayers[index].icon) \(Game.myGame.currPlayers[index].name) Round Score: \(Game.myGame.currPlayers[index].getRoundScore())\nBid: \(Game.myGame.currPlayers[index].getBid()) and made: \(Game.myGame.currPlayers[index].getTrick()) tricks.\nOverall Score: \(Game.myGame.currPlayers[index].getOverallScore())\n\n")
+            } else {
+                detailLabel.text!.append("\(Game.myGame.currPlayers[index].name) bid: \(Game.myGame.currPlayers[index].getBid())\n")
+            }
+            
+        }
         
         // Do any additional setup after loading the view.
     }

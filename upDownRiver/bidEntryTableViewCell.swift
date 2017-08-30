@@ -8,7 +8,7 @@
 
 import UIKit
 
-class bidEntryTableViewCell: UITableViewCell {
+class bidTrickEntryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameDisplay: UILabel!
     @IBOutlet weak var bidDisplay: UILabel!

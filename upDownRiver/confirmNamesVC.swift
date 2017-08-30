@@ -20,7 +20,7 @@ class nameConfirmation: UIViewController {
         
         for name in Game.myGame.currPlayers {
             print("\(name.name)")
-            nameTable.text?.append("\(name.icon), \(name.name), is ready!\n")
+            nameTable.text?.append("\(name.icon) \(name.name) is ready!\n")
             player += 1
         }
         

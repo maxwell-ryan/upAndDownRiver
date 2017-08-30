@@ -27,6 +27,9 @@
 		CFC33CF31F1FED1F001DB3F0 /* trickEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC33CF21F1FED1E001DB3F0 /* trickEntryVC.swift */; };
 		CFC33CF51F1FF72D001DB3F0 /* viewStatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC33CF41F1FF72D001DB3F0 /* viewStatsVC.swift */; };
 		CFFDDBAA1F4E3D12001E642A /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFDDBA91F4E3D12001E642A /* constants.swift */; };
+		CFFDF7A41F56235F008718BE /* trickEntryTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFDF7A31F56235F008718BE /* trickEntryTableViewVC.swift */; };
+		CFFDF7A61F562EAA008718BE /* trickEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFDF7A51F562EAA008718BE /* trickEntryTableViewCell.swift */; };
+		CFFDF7A81F562EDE008718BE /* trickHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFDF7A71F562EDE008718BE /* trickHeaderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		CFC33CF21F1FED1E001DB3F0 /* trickEntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trickEntryVC.swift; sourceTree = "<group>"; };
 		CFC33CF41F1FF72D001DB3F0 /* viewStatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewStatsVC.swift; sourceTree = "<group>"; };
 		CFFDDBA91F4E3D12001E642A /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		CFFDF7A31F56235F008718BE /* trickEntryTableViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trickEntryTableViewVC.swift; sourceTree = "<group>"; };
+		CFFDF7A51F562EAA008718BE /* trickEntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trickEntryTableViewCell.swift; sourceTree = "<group>"; };
+		CFFDF7A71F562EDE008718BE /* trickHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trickHeaderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,23 +131,26 @@
 			children = (
 				07F1DA691EF9DFBF0017E593 /* AppDelegate.swift */,
 				0725C11B1EFC8B950044011D /* bidEntryVC.swift */,
-				CF638FF01F51FE7B008C242C /* bidEntryTableViewVC.swift */,
-				CF638FF21F5204D8008C242C /* bidEntryTableViewCell.swift */,
+				CFFDDBA91F4E3D12001E642A /* constants.swift */,
+				0782365B1EFADE03002B8939 /* player.swift */,
+				0725C1211EFC8C010044011D /* selectPlayerCountVC.swift */,
+				0725C1201EFC8C010044011D /* enterNamesVC.swift */,
+				0725C11C1EFC8B950044011D /* confirmNamesVC.swift */,
 				0725C11F1EFC8C010044011D /* statsTableViewVC.swift */,
 				07411AED1F549F1A0078CBB8 /* statsTableViewCell.swift */,
-				07A7E34B1EFD877000E8092A /* playHandVC.swift */,
-				CFFDDBA91F4E3D12001E642A /* constants.swift */,
-				0725C1201EFC8C010044011D /* enterNamesVC.swift */,
-				0725C1211EFC8C010044011D /* selectPlayerCountVC.swift */,
-				0725C11C1EFC8B950044011D /* confirmNamesVC.swift */,
-				0782365B1EFADE03002B8939 /* player.swift */,
-				CFC33CF21F1FED1E001DB3F0 /* trickEntryVC.swift */,
-				CFC33CF41F1FF72D001DB3F0 /* viewStatsVC.swift */,
-				07F1DA701EF9DFBF0017E593 /* Assets.xcassets */,
-				07F1DA6D1EF9DFBF0017E593 /* Main.storyboard */,
+				CF638FF01F51FE7B008C242C /* bidEntryTableViewVC.swift */,
+				CF638FF21F5204D8008C242C /* bidEntryTableViewCell.swift */,
+				CFFDF7A71F562EDE008718BE /* trickHeaderTableViewCell.swift */,
 				07411AEF1F54A8030078CBB8 /* bidHeaderTableViewCell.swift */,
+				CFFDF7A51F562EAA008718BE /* trickEntryTableViewCell.swift */,
+				07A7E34B1EFD877000E8092A /* playHandVC.swift */,
+				CFC33CF41F1FF72D001DB3F0 /* viewStatsVC.swift */,
+				07F1DA6D1EF9DFBF0017E593 /* Main.storyboard */,
+				CFC33CF21F1FED1E001DB3F0 /* trickEntryVC.swift */,
+				CFFDF7A31F56235F008718BE /* trickEntryTableViewVC.swift */,
 				07F1DA721EF9DFBF0017E593 /* LaunchScreen.storyboard */,
 				07F1DA751EF9DFBF0017E593 /* Info.plist */,
+				07F1DA701EF9DFBF0017E593 /* Assets.xcassets */,
 			);
 			path = upDownRiver;
 			sourceTree = "<group>";
@@ -300,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F1DA6A1EF9DFBF0017E593 /* AppDelegate.swift in Sources */,
+				CFFDF7A41F56235F008718BE /* trickEntryTableViewVC.swift in Sources */,
 				CF638FF11F51FE7B008C242C /* bidEntryTableViewVC.swift in Sources */,
 				07411AF01F54A8030078CBB8 /* bidHeaderTableViewCell.swift in Sources */,
 				CF638FF31F5204D8008C242C /* bidEntryTableViewCell.swift in Sources */,
@@ -311,8 +321,10 @@
 				0725C1221EFC8C010044011D /* statsTableViewVC.swift in Sources */,
 				CFC33CF51F1FF72D001DB3F0 /* viewStatsVC.swift in Sources */,
 				0725C1241EFC8C010044011D /* selectPlayerCountVC.swift in Sources */,
+				CFFDF7A61F562EAA008718BE /* trickEntryTableViewCell.swift in Sources */,
 				07A7E34C1EFD877000E8092A /* playHandVC.swift in Sources */,
 				0725C1231EFC8C010044011D /* enterNamesVC.swift in Sources */,
+				CFFDF7A81F562EDE008718BE /* trickHeaderTableViewCell.swift in Sources */,
 				0725C11E1EFC8B950044011D /* confirmNamesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

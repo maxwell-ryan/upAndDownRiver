@@ -33,45 +33,64 @@ class bidEntryTableViewVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 1 {
+        if section == 0 {
             return "Bid Entry"
         } else {
-            return "Overview"
+            return ""
         }
+    }
+    
+
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        let height: CGFloat
+        
+        if section == 0 {
+            height = 35.0
+        } else {
+            height = 0.0
+        }
+        
+        return height
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        //if (section == 1) {
-            let returnedView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 25))
+        if (section == 0) {
+            let returnedView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 30))
             returnedView.backgroundColor = .white
             
-            let label = UILabel(frame: CGRect(x: 10, y: 7, width: view.frame.size.width, height: 25))
+            let label = UILabel(frame: CGRect(x: 10, y: 5, width: view.frame.size.width, height: 25))
         
             if section == 1 {
-                label.text = "Bid Entry"
+                label.text = ""
             } else {
-                label.text = "Overview"
+                label.text = "Bid Entry"
             }
         
             label.font = UIFont.boldSystemFont(ofSize: 15)
             label.textColor = colorScheme.blueberry
+            label.backgroundColor = .white
+            
             returnedView.addSubview(label)
             
             return returnedView
-        //}
+        } else {
+            return nil
+        }
         
     }
     
     @IBAction func completeBidEntry(_ sender: Any) {
         
-        //let bidTable = self.tableView.visibleCells as! Array<bidEntryTableViewCell>
+        //let bidTable = self.tableView.visibleCells as! Array<bidTrickEntryTableViewCell>
 
-        var cellArray = Array<bidEntryTableViewCell>()
+        var cellArray = Array<bidTrickEntryTableViewCell>()
         let section = 1
 
         for row in 0 ..< tableView.numberOfRows(inSection: section) {
-            let currentCell = tableView.cellForRow(at: IndexPath(row: row, section: section)) as! bidEntryTableViewCell
+            let currentCell = tableView.cellForRow(at: IndexPath(row: row, section: section)) as! bidTrickEntryTableViewCell
             cellArray.append(currentCell)
         }
         
@@ -104,7 +123,7 @@ class bidEntryTableViewVC: UITableViewController {
         let row = (sender.tag + offset) % Game.myGame.numPlayers
         
         //get the cell associated with the slider whose state changed
-        let cell = bidTableView.cellForRow(at: NSIndexPath(row: row, section: 1) as IndexPath) as! bidEntryTableViewCell
+        let cell = bidTableView.cellForRow(at: NSIndexPath(row: row, section: 1) as IndexPath) as! bidTrickEntryTableViewCell
         
         cell.bidDisplay.text = "\(value)"
         
@@ -154,7 +173,7 @@ class bidEntryTableViewVC: UITableViewController {
         }
         
         let confirmBidsAlert = UIAlertController(title: "Confirm round bids", message: bidSummary, preferredStyle: UIAlertControllerStyle.alert)
-        let confirmBidsAction = UIAlertAction(title: "Bids are Accurate", style: .default) { (action) in self.performSegue(withIdentifier: "playRound", sender: self)}
+        let confirmBidsAction = UIAlertAction(title: "Bids are accurate", style: .default) { (action) in self.performSegue(withIdentifier: "playRound", sender: self)}
         
         let changeBidsAction = UIAlertAction(title: "Let me change bid(s)", style: .destructive, handler: nil)
         
@@ -183,11 +202,24 @@ class bidEntryTableViewVC: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let headerCellHeight: CGFloat = 90
+        let bodyCellHeight: CGFloat = 50
+        
+        if indexPath.section == 0 {
+            return headerCellHeight
+           
+        } else {
+            return bodyCellHeight
+        }
+    }
+    
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 1 {
-            let cell = bidTableView.dequeueReusableCell(withIdentifier: "bidCell", for: indexPath) as! bidEntryTableViewCell
+            let cell = bidTableView.dequeueReusableCell(withIdentifier: "bidCell", for: indexPath) as! bidTrickEntryTableViewCell
             
             let currentPlayer = ((Game.myGame.firstBid + indexPath.row) % Game.myGame.numPlayers)
             
@@ -204,6 +236,7 @@ class bidEntryTableViewVC: UITableViewController {
             
             cell.bidDisplay.textColor = colorScheme.blueberry
             cell.bidDisplay.text = String(Game.myGame.currRound)
+            
             cell.nameDisplay.textColor = colorScheme.blueberry
             
             switch indexPath.row {
@@ -216,10 +249,13 @@ class bidEntryTableViewVC: UITableViewController {
             return cell
             
         } else {
-            let cell = bidTableView.dequeueReusableCell(withIdentifier: "bidHeaderCell", for: indexPath) as! bidHeaderTableViewCell
-            
+            let cell = bidTableView.dequeueReusableCell(withIdentifier: "bidHeaderCell", for: indexPath) as! headerTableViewCell
+
             cell.dealerDisplay.text = "Dealer: \(Game.myGame.currPlayers[Game.myGame.currDealer].icon) \(Game.myGame.currPlayers[Game.myGame.currDealer].name)"
             cell.dealerDisplay.textColor = colorScheme.appleCore
+            
+            cell.cardCountDisplay.text = "Cards: \(Game.myGame.currRound)"
+            cell.cardCountDisplay.textColor = colorScheme.appleCore
             
             cell.roundDisplay.text = "Round: \(Game.myGame.currRound)"
             cell.roundDisplay.textColor = colorScheme.blueberry
@@ -228,6 +264,7 @@ class bidEntryTableViewVC: UITableViewController {
             cell.roundProgressDisplay.setProgress(Float(Game.myGame.currRound) / Float(Game.myGame.numRounds), animated: true)
             cell.roundProgressDisplay.progressTintColor = colorScheme.apricot
             cell.roundProgressDisplay.trackTintColor = colorScheme.blueberry
+            
             
             return cell
         }
