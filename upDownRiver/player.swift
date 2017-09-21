@@ -11,7 +11,7 @@ import UIKit
 
 class Player {
     
-    let name: String
+    var name: String
     var icon: String
     var currentScore: Int
     var currentStreak: Int

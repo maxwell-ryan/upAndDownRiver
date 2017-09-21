@@ -10,4 +10,12 @@ import UIKit
 
 class frameStatsCollectionViewCell: UICollectionViewCell {
     
+    
+    @IBOutlet weak var bidFrameLabel: UILabel!
+    @IBOutlet weak var trickFrameLabel: UILabel!
+    @IBOutlet weak var scoreFrameLabel: UILabel!
+    @IBOutlet weak var roundFrameLabel: UILabel!
+    
+    
+
 }

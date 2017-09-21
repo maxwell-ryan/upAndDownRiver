@@ -15,6 +15,9 @@
 		07411AEE1F549F1A0078CBB8 /* statsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07411AED1F549F1A0078CBB8 /* statsTableViewCell.swift */; };
 		07411AF01F54A8030078CBB8 /* bidHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07411AEF1F54A8030078CBB8 /* bidHeaderTableViewCell.swift */; };
 		0782365C1EFADE03002B8939 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0782365B1EFADE03002B8939 /* player.swift */; };
+		07873B841F717E5A00AE951D /* detailedStatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07873B831F717E5A00AE951D /* detailedStatsVC.swift */; };
+		07873B861F71804000AE951D /* detailedStatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07873B851F71804000AE951D /* detailedStatsTableViewCell.swift */; };
+		07873B881F718C3900AE951D /* frameStatsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07873B871F718C3900AE951D /* frameStatsCollectionViewCell.swift */; };
 		07A7E34C1EFD877000E8092A /* playHandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A7E34B1EFD877000E8092A /* playHandVC.swift */; };
 		07F1DA6A1EF9DFBF0017E593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1DA691EF9DFBF0017E593 /* AppDelegate.swift */; };
 		07F1DA6F1EF9DFBF0017E593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F1DA6D1EF9DFBF0017E593 /* Main.storyboard */; };
@@ -58,6 +61,9 @@
 		07411AED1F549F1A0078CBB8 /* statsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = statsTableViewCell.swift; sourceTree = "<group>"; };
 		07411AEF1F54A8030078CBB8 /* bidHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bidHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		0782365B1EFADE03002B8939 /* player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
+		07873B831F717E5A00AE951D /* detailedStatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailedStatsVC.swift; sourceTree = "<group>"; };
+		07873B851F71804000AE951D /* detailedStatsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailedStatsTableViewCell.swift; sourceTree = "<group>"; };
+		07873B871F718C3900AE951D /* frameStatsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = frameStatsCollectionViewCell.swift; sourceTree = "<group>"; };
 		07A7E34B1EFD877000E8092A /* playHandVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playHandVC.swift; sourceTree = "<group>"; };
 		07F1DA661EF9DFBF0017E593 /* upDownRiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = upDownRiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F1DA691EF9DFBF0017E593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +152,9 @@
 				07A7E34B1EFD877000E8092A /* playHandVC.swift */,
 				CFC33CF41F1FF72D001DB3F0 /* viewStatsVC.swift */,
 				07F1DA6D1EF9DFBF0017E593 /* Main.storyboard */,
+				07873B871F718C3900AE951D /* frameStatsCollectionViewCell.swift */,
+				07873B831F717E5A00AE951D /* detailedStatsVC.swift */,
+				07873B851F71804000AE951D /* detailedStatsTableViewCell.swift */,
 				CFC33CF21F1FED1E001DB3F0 /* trickEntryVC.swift */,
 				CFFDF7A31F56235F008718BE /* trickEntryTableViewVC.swift */,
 				07F1DA721EF9DFBF0017E593 /* LaunchScreen.storyboard */,
@@ -318,6 +327,9 @@
 				0725C11D1EFC8B950044011D /* bidEntryVC.swift in Sources */,
 				CFFDDBAA1F4E3D12001E642A /* constants.swift in Sources */,
 				07411AEE1F549F1A0078CBB8 /* statsTableViewCell.swift in Sources */,
+				07873B861F71804000AE951D /* detailedStatsTableViewCell.swift in Sources */,
+				07873B881F718C3900AE951D /* frameStatsCollectionViewCell.swift in Sources */,
+				07873B841F717E5A00AE951D /* detailedStatsVC.swift in Sources */,
 				0725C1221EFC8C010044011D /* statsTableViewVC.swift in Sources */,
 				CFC33CF51F1FF72D001DB3F0 /* viewStatsVC.swift in Sources */,
 				0725C1241EFC8C010044011D /* selectPlayerCountVC.swift in Sources */,

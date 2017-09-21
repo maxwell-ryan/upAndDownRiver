@@ -10,15 +10,35 @@ import UIKit
 
 class detailedStatsTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    @IBOutlet fileprivate weak var collectionView: UICollectionView!
 
 }
+    
+extension detailedStatsTableViewCell {
+    
+    func setCollectionViewDataSourceDelegate <D: UICollectionViewDataSource & UICollectionViewDelegate>(_ dataSourceDelegate: D, forRow row: Int) {
+        
+        collectionView.delegate = dataSourceDelegate
+        collectionView.dataSource = dataSourceDelegate
+        collectionView.tag = row
+        //collectionView.setContentOffset(collectionView.contentOffset, animated:false) // Stops collection view if it was scrolling.
+        collectionView.reloadData()
+    }
+}
+
+
+//extension detailedStatsTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
+//      
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return Game.myGame.overallRound;
+//    }
+//
+//    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        
+//        let frameCell = collectionView.dequeueReusableCell(withReuseIdentifier: "frameCell", for: indexPath) as! frameStatsCollectionViewCell
+//      
+//        
+//        return frameCell
+//    }
+//}

@@ -10,28 +10,27 @@ import UIKit
 
 class playerNameScreenViewController: UIViewController {
     
-    @IBOutlet weak var playerNamePrompt: UILabel!
+
     @IBOutlet weak var nameEntryLabel: UILabel!
     @IBOutlet weak var nameEntryBox: UITextField!
-   
     @IBOutlet weak var iconSelector: UISlider!
     @IBOutlet weak var iconDisplay: UILabel!
+   
     var namesEntered = 0
     var player = 1
     var nameEntryComplete = false
     
-    var icons = ["😀","😃","😄","😁","🤠","🤡","🤑","😱","👻","👽","👩‍🔧","👨‍🚀"]
+    var icons = ["😀","😃","😄","😁","🤠","🤡","🤑","😱","👻","👽","🎅","👨‍🚀", "😂", "💪", "😂", "😜", "🙈", "🐧", "🐔"]
     
     override func viewDidLoad() {
         //super.viewDidLoad()
         
         print(Game.myGame.numPlayers)
-        playerNamePrompt.textColor = colorScheme.blueberry
-        playerNamePrompt.text = "Let's get the names of those \(Game.myGame.numPlayers) players:"
-        
+       
        
         nameEntryLabel.textColor = colorScheme.apricot
-        nameEntryLabel.text = "Enter player \(player)'s name and select a icon"
+        
+
         
         iconDisplay.text = icons[0]
         iconSelector.isContinuous = true
@@ -43,7 +42,27 @@ class playerNameScreenViewController: UIViewController {
         iconSelector.value = 0
         iconSelector.addTarget(self, action: #selector(changeIcon), for: .valueChanged)
 
-   }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        iconSelector.center.x += view.bounds.width
+        iconDisplay.center.x += view.bounds.width
+        
+        if nameEntryComplete == false {
+            nameEntryLabel.text = "Enter player \(player)'s name and select a icon"
+        } else {
+            nameEntryLabel.text = "Please change or re-confirm player \(player)"
+            
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        UIView.animate(withDuration: 0.5) {
+            self.iconSelector.center.x -= self.view.bounds.width
+            self.iconDisplay.center.x -= self.view.bounds.width
+        }
+    }
     
     func changeIcon(sender: UISlider) {
         
@@ -58,9 +77,10 @@ class playerNameScreenViewController: UIViewController {
             
             showAlertButtonTapped()
         
-        } else {
+        } else if nameEntryComplete == false {
             
             var nextPlayer: Player = Player(name: String(nameEntryBox.text!))
+            
             if iconDisplay.text != nil {
                 nextPlayer.icon = iconDisplay.text!
             }
@@ -72,14 +92,49 @@ class playerNameScreenViewController: UIViewController {
             nameEntryBox.text = ""
             namesEntered += 1
             
-            nameEntryLabel.text = "Enter player \(player + namesEntered)'s name:"
+            nameEntryLabel.text = "Enter player \(player + namesEntered)'s name and select an icon:"
             print(Game.myGame.currPlayers.count)
+            
+            if namesEntered == Game.myGame.numPlayers {
+                
+                print("All names received.")
+                nameEntryComplete = true
+                namesEntered = 0
+                player = 1
+                performSegue(withIdentifier: "nameConfirmation", sender: sender)
+            }
+            
+        } else if nameEntryComplete == true {
+            
+            var existingPlayer = Game.myGame.currPlayers[namesEntered]
+            
+            existingPlayer.name = String(nameEntryBox.text!)
+            
+            if iconDisplay.text != nil {
+                existingPlayer.icon = iconDisplay.text!
+            }
+            
+            iconSelector.value = 0
+            iconDisplay.text = icons[0]
+            nameEntryBox.text = ""
+            namesEntered += 1
+            
+            nameEntryLabel.text = "Enter player \(player + namesEntered)'s name and select an icon:"
+            print(Game.myGame.currPlayers.count)
+            
+            if namesEntered == Game.myGame.numPlayers {
+                
+                print("All names received.")
+                namesEntered = 0
+                player = 1
+                performSegue(withIdentifier: "nameConfirmation", sender: sender)
+            }
+            
+            
+            
         }
         
-        if namesEntered == Game.myGame.numPlayers {
-            print("All names received.")
-            performSegue(withIdentifier: "nameConfirmation", sender: sender)
-        }
+
         
     }
     
