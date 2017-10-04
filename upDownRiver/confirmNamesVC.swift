@@ -49,6 +49,10 @@ class nameConfirmation: UIViewController {
 
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        nameTable.text = ""
+    }
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -58,7 +62,7 @@ class nameConfirmation: UIViewController {
 
     @IBAction func showStats(_ sender: Any) {
         nameTable.text = ""
-        performSegue(withIdentifier: "getBids", sender: sender)
+        performSegue(withIdentifier: "getRoundCount", sender: sender)
     }
 
 

@@ -257,11 +257,11 @@ class bidEntryTableViewVC: UITableViewController {
             cell.cardCountDisplay.text = "Cards: \(Game.myGame.currRound)"
             cell.cardCountDisplay.textColor = colorScheme.appleCore
             
-            cell.roundDisplay.text = "Round: \(Game.myGame.currRound)"
+            cell.roundDisplay.text = "Round: \(Game.myGame.overallRound) of \(Game.myGame.numRounds)"
             cell.roundDisplay.textColor = colorScheme.blueberry
             cell.roundDisplay.font = UIFont.boldSystemFont(ofSize: 15)
             
-            cell.roundProgressDisplay.setProgress(Float(Game.myGame.currRound) / Float(Game.myGame.numRounds), animated: true)
+            cell.roundProgressDisplay.setProgress(Float(Game.myGame.overallRound) / Float(Game.myGame.numRounds), animated: true)
             cell.roundProgressDisplay.progressTintColor = colorScheme.apricot
             cell.roundProgressDisplay.trackTintColor = colorScheme.blueberry
             

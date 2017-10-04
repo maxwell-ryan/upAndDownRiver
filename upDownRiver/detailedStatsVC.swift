@@ -17,12 +17,13 @@ class DetailedStatsViewController: UITableViewController{
     
     @IBAction func nextRound(_ sender: Any) {
         
+        Game.myGame.advanceDeal()
+        Game.myGame.advanceRound()
+        
         if (Game.myGame.gameOver == false) {
             performSegue(withIdentifier: "advanceRound", sender: sender)
-            Game.myGame.advanceDeal()
-            Game.myGame.advanceRound()
         } else {
-            performSegue(withIdentifier: "gameOver", sender: sender)
+            performSegue(withIdentifier: "endGame", sender: sender)
         }
     
     }

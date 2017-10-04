@@ -27,6 +27,8 @@
 		07F1DA8A1EF9DFBF0017E593 /* upDownRiverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1DA891EF9DFBF0017E593 /* upDownRiverUITests.swift */; };
 		CF638FF11F51FE7B008C242C /* bidEntryTableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF638FF01F51FE7B008C242C /* bidEntryTableViewVC.swift */; };
 		CF638FF31F5204D8008C242C /* bidEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF638FF21F5204D8008C242C /* bidEntryTableViewCell.swift */; };
+		CFA7AD391F74936300F062BA /* roundCountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA7AD381F74936300F062BA /* roundCountVC.swift */; };
+		CFA7AD3B1F749DE400F062BA /* gameOverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA7AD3A1F749DE400F062BA /* gameOverVC.swift */; };
 		CFC33CF31F1FED1F001DB3F0 /* trickEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC33CF21F1FED1E001DB3F0 /* trickEntryVC.swift */; };
 		CFC33CF51F1FF72D001DB3F0 /* viewStatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC33CF41F1FF72D001DB3F0 /* viewStatsVC.swift */; };
 		CFFDDBAA1F4E3D12001E642A /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFDDBA91F4E3D12001E642A /* constants.swift */; };
@@ -79,6 +81,8 @@
 		07F1DA8B1EF9DFBF0017E593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF638FF01F51FE7B008C242C /* bidEntryTableViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bidEntryTableViewVC.swift; sourceTree = "<group>"; };
 		CF638FF21F5204D8008C242C /* bidEntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bidEntryTableViewCell.swift; sourceTree = "<group>"; };
+		CFA7AD381F74936300F062BA /* roundCountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundCountVC.swift; sourceTree = "<group>"; };
+		CFA7AD3A1F749DE400F062BA /* gameOverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameOverVC.swift; sourceTree = "<group>"; };
 		CFC33CF21F1FED1E001DB3F0 /* trickEntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trickEntryVC.swift; sourceTree = "<group>"; };
 		CFC33CF41F1FF72D001DB3F0 /* viewStatsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewStatsVC.swift; sourceTree = "<group>"; };
 		CFFDDBA91F4E3D12001E642A /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 				0725C1211EFC8C010044011D /* selectPlayerCountVC.swift */,
 				0725C1201EFC8C010044011D /* enterNamesVC.swift */,
 				0725C11C1EFC8B950044011D /* confirmNamesVC.swift */,
+				CFA7AD381F74936300F062BA /* roundCountVC.swift */,
 				0725C11F1EFC8C010044011D /* statsTableViewVC.swift */,
 				07411AED1F549F1A0078CBB8 /* statsTableViewCell.swift */,
 				CF638FF01F51FE7B008C242C /* bidEntryTableViewVC.swift */,
@@ -152,6 +157,7 @@
 				07A7E34B1EFD877000E8092A /* playHandVC.swift */,
 				CFC33CF41F1FF72D001DB3F0 /* viewStatsVC.swift */,
 				07F1DA6D1EF9DFBF0017E593 /* Main.storyboard */,
+				CFA7AD3A1F749DE400F062BA /* gameOverVC.swift */,
 				07873B871F718C3900AE951D /* frameStatsCollectionViewCell.swift */,
 				07873B831F717E5A00AE951D /* detailedStatsVC.swift */,
 				07873B851F71804000AE951D /* detailedStatsTableViewCell.swift */,
@@ -324,6 +330,7 @@
 				CF638FF31F5204D8008C242C /* bidEntryTableViewCell.swift in Sources */,
 				0782365C1EFADE03002B8939 /* player.swift in Sources */,
 				CFC33CF31F1FED1F001DB3F0 /* trickEntryVC.swift in Sources */,
+				CFA7AD391F74936300F062BA /* roundCountVC.swift in Sources */,
 				0725C11D1EFC8B950044011D /* bidEntryVC.swift in Sources */,
 				CFFDDBAA1F4E3D12001E642A /* constants.swift in Sources */,
 				07411AEE1F549F1A0078CBB8 /* statsTableViewCell.swift in Sources */,
@@ -331,6 +338,7 @@
 				07873B881F718C3900AE951D /* frameStatsCollectionViewCell.swift in Sources */,
 				07873B841F717E5A00AE951D /* detailedStatsVC.swift in Sources */,
 				0725C1221EFC8C010044011D /* statsTableViewVC.swift in Sources */,
+				CFA7AD3B1F749DE400F062BA /* gameOverVC.swift in Sources */,
 				CFC33CF51F1FF72D001DB3F0 /* viewStatsVC.swift in Sources */,
 				0725C1241EFC8C010044011D /* selectPlayerCountVC.swift in Sources */,
 				CFFDF7A61F562EAA008718BE /* trickEntryTableViewCell.swift in Sources */,

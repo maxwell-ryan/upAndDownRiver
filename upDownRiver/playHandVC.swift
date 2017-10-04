@@ -31,7 +31,7 @@ class playHandVC: UIViewController {
         
         currRoundDisplay.textColor = colorScheme.blueberry
         currRoundDisplay.font = UIFont.boldSystemFont(ofSize: 15)
-        currRoundDisplay.text = "Round \(Game.myGame.currRound)"
+        currRoundDisplay.text = "Round \(Game.myGame.overallRound) of \(Game.myGame.numRounds)"
         
         detailLabel.textColor = colorScheme.blueberry
         

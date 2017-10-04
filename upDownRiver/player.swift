@@ -168,14 +168,13 @@ class Game {
     
     var numPlayers: Int
     
-    //defaults to max number of rounds possible with given player count
-    var numRounds: Int {
-        return (52 / numPlayers) * 2 - 1
-    }
-   
+    //set via roundCountVC based upon user selection
+    var numRounds: Int
+    var apexRound: Int
+    
     var currRound: Int  //tracks the current round in relation to num cards that round
     var overallRound: Int   //tracks the overall round count - each currRound has 2 instances except top of river (apex)
-    
+
     var currDealer: Int
     var firstBid: Int
     
@@ -191,11 +190,17 @@ class Game {
     }
     
     private init(numPlayers: Int){
+        
         self.numPlayers = numPlayers
+        
+        self.apexRound = 52 / numPlayers
+        self.numRounds = (52 / numPlayers) * 2 - 1
+        
         self.currRound = 1
         self.overallRound = 1
         self.currDealer = 0
         self.firstBid = 1
+        
         self.upRiver = true
         self.gameOver = false
     }
@@ -214,13 +219,13 @@ class Game {
     func advanceRound() {
         
         //advances round counts forward
-        if ((currRound + 1) < (52 / numPlayers)) {
+        if ((currRound + 1) < apexRound) && upRiver == true {
             
             currRound += 1
             overallRound += 1
         
         //advances round count forward and identifies top of river event
-        } else if ((currRound + 1) == (52 / numPlayers)) {
+        } else if ((currRound + 1) == apexRound) && upRiver == true {
             
             currRound += 1
             upRiver = false
@@ -237,6 +242,8 @@ class Game {
             
             gameOver = true
         }
+        
+        print("currRound: \(currRound) apexRound: \(apexRound) overallRound: \(overallRound) numRounds: \(numRounds) gameOver: \(gameOver)")
     }
     
 }
